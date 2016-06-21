@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
-
+/*
+问题描述：删除单链表中间的结点，只返回那个结点的指针
+*/
 using namespace std;
 
 typedef struct node

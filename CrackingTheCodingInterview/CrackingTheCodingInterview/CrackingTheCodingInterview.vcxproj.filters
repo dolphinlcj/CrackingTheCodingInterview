@@ -54,5 +54,11 @@
     <ClCompile Include="addTwoListNumber.cpp">
       <Filter>Source Files\Linked Lists</Filter>
     </ClCompile>
+    <ClCompile Include="findCircularLinkllistHeadNode.cpp">
+      <Filter>Source Files\Linked Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="findNthLastElement.cpp">
+      <Filter>Source Files\Linked Lists</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

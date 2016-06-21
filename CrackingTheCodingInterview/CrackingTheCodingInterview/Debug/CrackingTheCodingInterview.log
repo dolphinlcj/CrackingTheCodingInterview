@@ -1,13 +1,15 @@
-﻿Build started 2016/6/19 20:51:24.
-     1>Project "E:\visual stdio 2013 projects\CrackingTheCodingInterview\CrackingTheCodingInterview\CrackingTheCodingInterview.vcxproj" on node 2 (Build target(s)).
+﻿生成启动时间为 2016/06/21 20:18:43。
+     1>项目“D:\File\visual studio 2013 project\CrackingTheCodingInterview\CrackingTheCodingInterview\CrackingTheCodingInterview.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt addTwoListNumber.cpp
-         addTwoListNumber.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt findNthLastElement.cpp
+         findNthLastElement.cpp
+     1>d:\file\visual studio 2013 project\crackingthecodinginterview\crackingthecodinginterview\findnthlastelement.cpp(68): warning C4715: “findNthLastElement”: 不是所有的控件路径都返回值
+     1>d:\file\visual studio 2013 project\crackingthecodinginterview\crackingthecodinginterview\findnthlastelement.cpp(94): warning C4715: “findNthLastElement1”: 不是所有的控件路径都返回值
        Link:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\visual stdio 2013 projects\CrackingTheCodingInterview\Debug\CrackingTheCodingInterview.exe" /INCREMENTAL /NOLOGO FaceTrackLib.lib KinectBackgroundRemoval180_32.lib KinectFusion180_32.lib KinectInteraction180_32.lib Kinect10.lib opencv_core249d.lib opencv_highgui249d.lib opencv_video249d.lib opencv_ml249d.lib opencv_legacy249d.lib opencv_imgproc249d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\visual stdio 2013 projects\CrackingTheCodingInterview\Debug\CrackingTheCodingInterview.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\visual stdio 2013 projects\CrackingTheCodingInterview\Debug\CrackingTheCodingInterview.lib" /MACHINE:X86 Debug\addTwoListNumber.obj
-         CrackingTheCodingInterview.vcxproj -> E:\visual stdio 2013 projects\CrackingTheCodingInterview\Debug\CrackingTheCodingInterview.exe
-     1>Done Building Project "E:\visual stdio 2013 projects\CrackingTheCodingInterview\CrackingTheCodingInterview\CrackingTheCodingInterview.vcxproj" (Build target(s)).
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\File\visual studio 2013 project\CrackingTheCodingInterview\Debug\CrackingTheCodingInterview.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\File\visual studio 2013 project\CrackingTheCodingInterview\Debug\CrackingTheCodingInterview.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\File\visual studio 2013 project\CrackingTheCodingInterview\Debug\CrackingTheCodingInterview.lib" /MACHINE:X86 Debug\findNthLastElement.obj
+         CrackingTheCodingInterview.vcxproj -> D:\File\visual studio 2013 project\CrackingTheCodingInterview\Debug\CrackingTheCodingInterview.exe
+     1>已完成生成项目“D:\File\visual studio 2013 project\CrackingTheCodingInterview\CrackingTheCodingInterview\CrackingTheCodingInterview.vcxproj”(Build 个目标)的操作。
 
-Build succeeded.
+生成成功。
 
-Time Elapsed 00:00:03.22
+已用时间 00:00:00.71
