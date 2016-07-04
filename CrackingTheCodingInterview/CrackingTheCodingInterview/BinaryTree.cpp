@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 using namespace std;
 
 #define STACK_MAX_SIZE 30
@@ -71,6 +72,35 @@ void postOrderBTree(BTreeNode *bt)
 	}
 }
 
+void levelOrderBTree(BTreeNode *bt)
+{
+	BTreeNode *b;
+	
+	queue<BTreeNode *> q;
+	if (bt != NULL)
+	{
+		q.push(bt);
+	}
+	
+	while (!q.empty())
+	{
+		b = q.front();
+		cout << b->data; 
+		q.pop();
+
+		if (b->left)
+		{
+			q.push(b->left);
+		}
+		if (b->right)
+		{
+			q.push(b->right);
+		}
+
+	}
+
+}
+
 int highBTree(BTreeNode *bt)
 {
 	if (bt != NULL)
@@ -85,6 +115,59 @@ int highBTree(BTreeNode *bt)
 	}
 	
 }
+
+bool emptyTree(BTreeNode *bt)
+{
+	if (bt == NULL)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+//find element in the BTree
+bool findBTree(BTreeNode *bst, elemType x)
+{
+	if (bst == NULL)
+	{
+		return NULL;
+	}
+	else
+	{
+		if (bst->data == x)
+		{
+			return true;
+		}
+		else
+		{
+			if (findBTree(bst->left, x))
+			{
+				return true;
+			}
+			if (findBTree(bst->right, x))
+			{
+				return true;
+			}
+			return NULL;
+		}
+	}
+}
+
+//destroy the Binary Tree
+void destroyBTree(BTreeNode * &bst)
+{
+	if (bst != NULL)
+	{
+		destroyBTree(bst->left);
+		destroyBTree(bst->right);
+		free(bst);
+		bst = NULL;
+	}
+}
+
 int main()
 {
 	init();
@@ -116,9 +199,21 @@ int main()
 	cout << endl;
 	cout << endl;
 
+	cout << "level order: " << endl;
+	levelOrderBTree(bst);
+	cout << endl;
+	cout << endl;
+
 	//print the hight of BTree
-	cout << "The hight of Binary Tree" << endl;
+	cout << "The hight of Binary Tree: " << endl;
 	cout << highBTree(bst) << endl;
+	cout << endl;
+
+	//find x in the Binary Tree
+	cout << "find x address in the Binary Tree:" << endl;
+	cout << findBTree(bst, 3) << endl;
+	cout << findBTree(bst, 10) << endl;
+	cout << endl;
 	
 	system("pause");
 	return 0;
