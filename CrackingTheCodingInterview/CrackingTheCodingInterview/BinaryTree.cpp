@@ -100,6 +100,37 @@ void levelOrderBTree(BTreeNode *bt)
 	}
 
 }
+//print BTree node of every level
+//set end flag of every level
+void printNodeByOneLevelOrder(BTreeNode* bt)
+{
+	queue<BTreeNode *> q;
+	q.push(bt);
+	q.push(0);
+	
+	while (!q.empty())
+	{
+		BTreeNode* node = q.front();
+		q.pop();
+		if (node)
+		{
+			cout << node->data << " ";
+			if (node->left)
+			{
+				q.push(node->left);
+			}
+			if (node->right)
+			{
+				q.push(node->right);
+			}
+		}
+		else if (!q.empty())
+		{
+			q.push(0);
+			cout << endl;
+		}
+	}
+}
 
 int highBTree(BTreeNode *bt)
 {
@@ -201,6 +232,11 @@ int main()
 
 	cout << "level order: " << endl;
 	levelOrderBTree(bst);
+	cout << endl;
+	cout << endl;
+
+	cout << "level order by every level" << endl;
+	printNodeByOneLevelOrder(bst);
 	cout << endl;
 	cout << endl;
 
