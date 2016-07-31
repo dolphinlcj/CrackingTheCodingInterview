@@ -70,7 +70,6 @@ bool father(Node* n1, Node* n2)
 		return father(n1->left, n2) || father(n1->right, n2);
 	}
 }
-
 Node* findFirstAncestor1(Node* n1, Node* n2)
 {
 	if (n1 == NULL || n2 == NULL)
@@ -89,23 +88,6 @@ Node* findFirstAncestor1(Node* n1, Node* n2)
 	}
 
 	return NULL;
-}
-
-//without parent pointer
-Node* findFirstAncestor2(Node* head, Node* n1, Node* n2, Node* finalNode)
-{
-	if (head == NULL || n1 == NULL || n2 == NULL)
-	{
-		return NULL;
-	}
-	//find the last same ancestor, the view is great
-	if (head && father(head, n1) && father(head, n2))
-	{
-		finalNode = head;
-		findFirstAncestor2(head->left, n1, n2, finalNode);
-		findFirstAncestor2(head->right, n1, n2, finalNode);
-	}
-
 }
 
 Node* search(Node* head, int x)
@@ -145,10 +127,6 @@ int main()
 
 	Node* m1 = findFirstAncestor1(n1, n2);
 	cout << m1->data << endl;
-	
-	Node* finalNode = NULL;
-	Node* m2 = findFirstAncestor2(head, n1, n2, finalNode);
-	cout << m2->data << endl;
 
 	system("pause");
 	return 0;
