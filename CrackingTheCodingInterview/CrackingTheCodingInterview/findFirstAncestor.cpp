@@ -55,40 +55,6 @@ Node* findFirstAncestor(Node* n1, Node* n2)
 	}
 	return n2;
 }
-bool father(Node* n1, Node* n2)
-{
-	if (n1 == NULL)
-	{
-		return false;
-	}
-	else if (n1 == n2)
-	{
-		return true;
-	}
-	else
-	{
-		return father(n1->left, n2) || father(n1->right, n2);
-	}
-}
-Node* findFirstAncestor1(Node* n1, Node* n2)
-{
-	if (n1 == NULL || n2 == NULL)
-	{
-		return NULL;
-	}
-
-	while (n1)
-	{
-		if (father(n1, n2))
-		{
-			return n1;
-		}
-		n1 = n1->parent;
-
-	}
-
-	return NULL;
-}
 
 Node* search(Node* head, int x)
 {
@@ -124,10 +90,7 @@ int main()
 	
 	Node * n = findFirstAncestor(n1, n2);
 	cout << n->data << endl;
-
-	Node* m1 = findFirstAncestor1(n1, n2);
-	cout << m1->data << endl;
-
+	
 	system("pause");
 	return 0;
 }
